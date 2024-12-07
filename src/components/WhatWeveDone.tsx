@@ -24,7 +24,7 @@ const WhatWeveDone = () => {
 
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-x-5 gap-y-3">
         {whatWeveDoneData.map((item, index) => (
-          <div key={index} className="lg:my-7 my-10">
+          <div key={index} className="lg:my-10 my-10">
             <div className="">
               <img className="rounded-lg" src={item.img} alt="" />
             </div>
@@ -38,7 +38,7 @@ const WhatWeveDone = () => {
               <div className="mt-2 flex gap-2 flex-wrap">
                 {item.frameWork.map((fw, index) => (
                   <span
-                    className="bg-appWhite py-2 px-3 text-[#8c29dd] text-sm rounded-full"
+                    className="bg-appWhite py-2 px-3 text-[#a33af9] text-sm rounded-full"
                     key={index}
                   >
                     {fw}

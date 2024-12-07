@@ -114,3 +114,38 @@ export const whatWeveDoneData = [
     frameWork: ["Adobe Creative Suite", "Figma", "Photoshop"],
   },
 ];
+
+export interface clientSay {
+  name: string;
+  testimony: string;
+  address: string;
+  date: string;
+  image: string;
+}
+
+export const clientSayData: clientSay[] = [
+  {
+    name: "Adewale Austin",
+    address: "Abuja, Nigeria",
+    date: "30 October 2024",
+    image: assets.client1,
+    testimony:
+      "Our team of expert are equipped to propel your brand to new heights. Partner with us let's guide you through every step.",
+  },
+  {
+    name: "Sarah Abraham",
+    address: "Ontario, Canada",
+    date: "30 October 2024",
+    image: assets.client2,
+    testimony:
+      "Our team of expert are equipped to propel your brand to new heights. Partner with us let's guide you through every step.",
+  },
+  {
+    name: "Henry Hampthon",
+    address: "Ontario, Kenya",
+    date: "30 October 2024",
+    image: assets.client3,
+    testimony:
+      "Our team of expert are equipped to propel your brand to new heights. Partner with us let's guide you through every step.",
+  },
+];

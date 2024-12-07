@@ -11,3 +11,9 @@ body {
 .dot {
   @apply absolute bottom-[-8px] left-[44%] h-[5px] w-[5px] rounded-full bg-appPurple opacity-0 transform scale-0 transition-all duration-300 ease-in-out;
 }
+
+.bg-testimonial {
+  background-image: url("./assets/Pattern.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

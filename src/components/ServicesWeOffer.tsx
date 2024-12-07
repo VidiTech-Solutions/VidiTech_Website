@@ -11,7 +11,7 @@ const ServicesWeOffer = () => {
         </span>
       </div>
 
-      <div className="my-10 lg:my-12 grid lg:grid-cols-3 md:grid-cols-2 md:gap-x-6 grid-cols-1 gap-y-2">
+      <div className="my-10 lg:my-12 grid lg:grid-cols-3 md:grid-cols-2 md:gap-x-6 grid-cols-1 gap-y-6">
         {serviceOfferData.map((data, index) => (
           <div
             key={index}

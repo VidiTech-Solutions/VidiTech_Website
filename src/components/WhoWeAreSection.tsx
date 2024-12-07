@@ -11,7 +11,7 @@ const WhoWeAreSection = () => {
 
         <div className="w-full max-w-[44rem]">
           <div className="flex items-center gap-2">
-            <img src={assets.arrowRight} alt="" className="max-w-[1.8rem]" />
+            <img src={assets.arrowImg} alt="" className="max-w-[5rem]" />
             <h2 className="font-extrabold text-base text-appPurple">
               Who We Are
             </h2>
