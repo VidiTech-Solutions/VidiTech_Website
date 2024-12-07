@@ -4,7 +4,7 @@ import { projectCountData } from "../data/data";
 const Hero = () => {
   return (
     <>
-      <div className="w-full px-8 lg:px-16 lg:py-10 py-6 mt-10 flex flex-col lg:flex-row lg:gap-x-10 gap-y-12">
+      <div className="w-full px-6 lg:px-16 lg:py-10 py-6 mt-10 flex flex-col lg:flex-row lg:gap-x-10 gap-y-12">
         {/* Text Section */}
         <div className="w-full lg:max-w-[44rem] ">
           <h1 className="font-extrabold text-[#0d0d0d] text-4xl md:text-6xl ">
@@ -27,7 +27,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-to-br from-[#0A0557] to-[#0B075E]  lg:py-8 py-4 md:px-20 px-8 flex  justify-around items-center">
+      <div className="bg-gradient-to-br from-[#0A0557] to-[#0B075E]  lg:py-8 py-4 md:px-20 px-5 flex  justify-around items-center">
         {projectCountData.map((data, index) => (
           <div key={index} className="relative">
             <div

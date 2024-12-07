@@ -3,7 +3,7 @@ import { serviceOfferData } from "../data/data";
 
 const ServicesWeOffer = () => {
   return (
-    <div className="w-full px-8 lg:px-20 py-7 lg:py-14 my-10 lg:my-16 bg-[#07000E] text-appWhite">
+    <div className="w-full px-6 lg:px-20 py-7 lg:py-14 my-10 lg:my-16 bg-[#07000E] text-appWhite">
       <div className="flex items-center gap-2">
         <h1 className="text-4xl md:text-[43px] font-bold">Services We Offer</h1>
         <span className="text-6xl text-[#A234FD]">

@@ -148,4 +148,20 @@ export const clientSayData: clientSay[] = [
     testimony:
       "Our team of expert are equipped to propel your brand to new heights. Partner with us let's guide you through every step.",
   },
+  {
+    name: "Henry Hampthon",
+    address: "Ontario, Kenya",
+    date: "30 October 2024",
+    image: assets.client3,
+    testimony:
+      "Our team of expert are equipped to propel your brand to new heights. Partner with us let's guide you through every step.",
+  },
+  {
+    name: "Henry Hampthon",
+    address: "Ontario, Kenya",
+    date: "30 October 2024",
+    image: assets.client3,
+    testimony:
+      "Our team of expert are equipped to propel your brand to new heights. Partner with us let's guide you through every step.",
+  },
 ];

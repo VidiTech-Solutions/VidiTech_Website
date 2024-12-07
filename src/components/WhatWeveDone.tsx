@@ -4,7 +4,7 @@ import { whatWeveDoneData } from "../data/data";
 
 const WhatWeveDone = () => {
   return (
-    <div className="w-full px-8 lg:px-20 py-7 lg:py-14 my-10 lg:my-16">
+    <div className="w-full px-6 lg:px-20 py-7 lg:py-14 my-10 lg:my-16">
       <div className="flex items-center gap-2">
         <img src={assets.arrowImg} alt="" className="max-w-[5rem]" />
         <h2 className="font-extrabold text-base text-appPurple">

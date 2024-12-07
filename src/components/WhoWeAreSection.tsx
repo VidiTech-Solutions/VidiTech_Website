@@ -3,7 +3,7 @@ import assets from "../../public/assets/images";
 
 const WhoWeAreSection = () => {
   return (
-    <div className="w-full lg:py-16 lg:px-[4rem] px-8 lg:my-16 my-10">
+    <div className="w-full lg:py-16 lg:px-[4rem] px-6 lg:my-16 my-10">
       <div className="flex lg:flex-row gap-16 flex-col justify-between">
         <div className="w-full max-w-[30rem]">
           <img src={assets.whoWeAreImg} alt="image" />
