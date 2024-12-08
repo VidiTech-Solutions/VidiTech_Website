@@ -165,3 +165,44 @@ export const clientSayData: clientSay[] = [
       "Our team of expert are equipped to propel your brand to new heights. Partner with us let's guide you through every step.",
   },
 ];
+
+export interface footerItem {
+  label: string;
+  icon?: string;
+  link: string;
+}
+
+export interface footerData {
+  title: string;
+  items: footerItem[];
+}
+
+export const footerItems: footerData[] = [
+  {
+    title: "Company",
+    items: [
+      { label: "About", link: "/about" },
+      { label: "Services", link: "/services" },
+      { label: "Projects", link: "/projects" },
+      { label: "Blogs", link: "/blog" },
+    ],
+  },
+
+  {
+    title: "Support",
+    items: [
+      { label: "Contact", link: "/contact-us" },
+      { label: "Faqs", link: "" },
+      { label: "Contact", link: "/contact-us" },
+    ],
+  },
+
+  {
+    title: "Follow Us",
+    items: [
+      { label: "Facebook", link: "", icon: "ic:outline-facebook" },
+      { label: "Twitter", link: "", icon: "prime:twitter" },
+      { label: "LinkedIn", link: "", icon: "devicon-plain:linkedin" },
+    ],
+  },
+];

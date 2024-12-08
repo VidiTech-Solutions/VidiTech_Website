@@ -1,14 +1,12 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Scrollbar } from "swiper/modules";
-import "swiper/swiper-bundle.css";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
 import assets from "../../public/assets/images";
 import { clientSayData } from "../data/data";
 
 const Testimonials = () => {
   return (
-    <div className="w-full py-7 lg:py-14 my-10 lg:my-16 bg-appWhite bg-testimonial">
+    <div className="w-full py-7 lg:py-16 my-10 lg:my-16 bg-appWhite bg-testimonial">
       <div className="px-6 lg:px-20">
         <div className="flex items-center gap-2">
           <img src={assets.arrowImg} alt="" className="max-w-[5rem]" />
@@ -16,7 +14,7 @@ const Testimonials = () => {
             Testimonials
           </h2>
         </div>
-        <h2 className="w-full lg:max-w-[59rem]  my-3 font-extrabold text-3xl text-[#0d0d0d]">
+        <h2 className="w-full lg:max-w-[59rem] my-3 font-extrabold text-3xl text-[#0d0d0d]">
           Hear from our users who have saved thousands on their Startup and SaaS
           solution spend.
         </h2>

@@ -1,5 +1,6 @@
 import Hero from "../components/Hero";
 import ServicesWeOffer from "../components/ServicesWeOffer";
+import TakeActionSection from "../components/TakeActionSection";
 import Testimonials from "../components/Testimonials";
 import WhatWeveDone from "../components/WhatWeveDone";
 import WhoWeAreSection from "../components/WhoWeAreSection";
@@ -12,6 +13,7 @@ const HomePage = () => {
       <ServicesWeOffer />
       <WhatWeveDone />
       <Testimonials />
+      <TakeActionSection />
     </>
   );
 };
