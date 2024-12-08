@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 const Footer = () => {
   return (
-    <div className="w-full px-6 lg:px-16 py-8 lg:py-16 lg:mt-14 mt-10 bg-[#0c0934]">
+    <div className="w-full px-6 lg:px-16 py-8 lg:py-16 lg:mt-28 mt-16 bg-[#0c0934]">
       <div className="w-full border border-appPurple/80 backdrop-blur-lg text-appWhite rounded-lg px-5 py-6 lg:py-12 grid lg:grid-cols-[1fr,1fr] lg:gap-8">
         {/* logo */}
         <div>
@@ -15,7 +15,7 @@ const Footer = () => {
               vidiTech
             </span>
           </Link>
-          <p className="text-sm font-light my-1">
+          <p className="text-sm font-light my-2.5">
             Join our newsletter to stay up to date on features and releases.
           </p>
           <div className="my-3 flex gap-4">

@@ -1,14 +1,22 @@
+import { useState } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { pricingPlans } from "../data/data";
+import RadioToggle from "./RadioToggle";
 
 const PricingPlan = () => {
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <div className="w-full lg:py-16 py-10 lg:px-16 px-7">
       <h1 className="text-appNavy w-full max-w-[35rem] mx-auto text-center font-extrabold text-4xl lg:text-6xl ">
         Pricing Plans of Your Art Journey
       </h1>
-      <div className="flex items-center gap-28 justify-center mt-7">
+      <div className="flex items-center gap-16 justify-center mt-7">
         <h2 className="font-medium text-base text-appPurple/75">Monthly</h2>
+        <RadioToggle
+          isActive={isActive}
+          onChange={() => setIsActive((prev) => !prev)}
+        />
         <h2 className="font-medium text-base text-appPurple/75">
           Annually Save 30%
         </h2>
