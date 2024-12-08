@@ -1,4 +1,5 @@
 import Hero from "../components/Hero";
+import PricingPlan from "../components/PricingPlan";
 import ServicesWeOffer from "../components/ServicesWeOffer";
 import TakeActionSection from "../components/TakeActionSection";
 import Testimonials from "../components/Testimonials";
@@ -13,6 +14,7 @@ const HomePage = () => {
       <ServicesWeOffer />
       <WhatWeveDone />
       <Testimonials />
+      <PricingPlan />
       <TakeActionSection />
     </>
   );

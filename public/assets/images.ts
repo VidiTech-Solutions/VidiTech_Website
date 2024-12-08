@@ -13,6 +13,8 @@ export const assets = {
   client1: `${basePath}/clients1.svg`,
   client2: `${basePath}/clients2.svg`,
   client3: `${basePath}/clients3.svg`,
+  ourStoryImg: `${basePath}/ourStoryImg.svg`,
+  planImg: `${basePath}/planImg.webp`,
 };
 
 export default assets;

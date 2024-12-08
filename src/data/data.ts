@@ -206,3 +206,55 @@ export const footerItems: footerData[] = [
     ],
   },
 ];
+
+interface PricingPlan {
+  plan: string;
+  price: string;
+  label: string;
+  features: string[];
+  image?: string;
+}
+
+export const pricingPlans: PricingPlan[] = [
+  {
+    plan: "Silver",
+    price: "29",
+    label: "Silver Plan",
+    features: [
+      "Start free Trial today",
+      "Text-to-video",
+      "Automated translations",
+      "100 Creative Units",
+      "All Basic Features",
+      "20+ Remove background/mo",
+    ],
+  },
+  {
+    plan: "Gold",
+    price: "59",
+    label: "Gold Plan",
+    features: [
+      "Start free Trial today",
+      "Text-to-video",
+      "Automated translations",
+      "1500 Creative Units",
+      "All Basic Features",
+      "50+ Remove background/mo",
+    ],
+    image: assets.planImg,
+  },
+  {
+    plan: "Platinum",
+    price: "199",
+    label: "Platinum Plan",
+    features: [
+      "Start free Trial today",
+      "Text-to-video",
+      "Automated translations",
+      "Unlimited Avatars",
+      "All Basic Features",
+      "Unlimited Remove background/mo",
+      "16x Factor Upscaling",
+    ],
+  },
+];

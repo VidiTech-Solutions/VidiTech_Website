@@ -20,7 +20,7 @@ const Testimonials = () => {
         </h2>
       </div>
 
-      <div className="w-full my-8 lg:my-10 md:px-4 px-6">
+      <div className="w-full my-8 lg:my-14 md:px-4 px-6">
         <Swiper
           //   modules={[Scrollbar]}
           direction={"horizontal"}
