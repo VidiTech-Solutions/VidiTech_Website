@@ -17,3 +17,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.aboutpageBg {
+  background-image: url("./assets/aboutBg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}

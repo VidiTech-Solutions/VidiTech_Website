@@ -63,7 +63,7 @@ const PricingPlan = () => {
                   <span className="bg-[#535EE0] text-appWhite rounded-md p-0.5">
                     <Icon icon="ci:check" className="text-lg" />
                   </span>
-                  <span className="text-[15.2px]"> {feature}</span>
+                  <span className="lg:text-[15.2px] text-sm"> {feature}</span>
                 </li>
               ))}
             </ul>
