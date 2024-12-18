@@ -320,18 +320,13 @@ export const achievments = [
 export const teamsData = [
   {
     img: assets.teamImg1,
-    name: "Moses",
+    name: "Victor",
     postition: "CEO",
   },
   {
     img: assets.teamImg2,
-    name: "Halimah",
-    postition: "Admin",
-  },
-  {
-    img: assets.teamImg3,
-    name: "Bishop",
-    postition: "CTO",
+    name: "Divine",
+    postition: "CEO",
   },
 ];
 

@@ -1,14 +1,15 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import assets from "../../public/assets/images";
+import { achievments, ourValues, teamsData } from "../data/data";
 
 const AboutPage = () => {
   return (
     <div>
-      <div className="relative aboutpageBg text-appWhite py-8 px-14">
+      <div className="relative aboutpageBg text-appWhite py-8 px-6 lg:px-14">
         {/* Overlay */}
         <div className="absolute inset-0 bg-black opacity-80"></div>
-        <div className="absolute mt-20">
-          <h1 className="w-full max-w-[46rem] font-extrabold text-6xl">
+        <div className="absolute lg:mt-20 mt-16">
+          <h1 className="w-full lg:max-w-[46rem] font-extrabold text-5xl lg:text-6xl">
             We pride ourselves on our{" "}
             <span className="text-appPurple">commitment</span> to excellence.{" "}
           </h1>
@@ -23,43 +24,158 @@ const AboutPage = () => {
           </button>
         </div>
       </div>
-      <div className="flex lg:flex-row gap-16 flex-col justify-between my-14 px-6 lg:px-14">
-        <div className="w-full max-w-[30rem]">
-          <img src={assets.ourStoryImg} alt="image" />
+
+      <>
+        <div className="flex lg:flex-row gap-16 flex-col justify-between my-14 px-6 lg:px-14">
+          <div className="w-full max-w-[30rem]">
+            <img src={assets.ourStoryImg} alt="image" />
+          </div>
+
+          <div className="w-full max-w-[44rem]">
+            <div className="flex items-center gap-2">
+              <img src={assets.arrowImg} alt="" className="max-w-[5rem]" />
+              <h2 className="font-extrabold text-base text-appPurple">
+                Our Story
+              </h2>
+            </div>
+            <h1 className="font-extrabold text-4xl w-full my-3 text-[#0d0d0d]">
+              We pride ourselves on our{" "}
+              <span className="text-appPurple">commitment</span> to excellence.
+            </h1>
+            <p className="my-6 text-base md:text-lg">
+              VidiTech Technology was founded to connect businesses with the top
+              freelance talent in technology and business. Since our inception,
+              we've grown into a trusted global platform, bridging the gap
+              between companies’ needs and skilled professionals, helping
+              businesses succeed and freelancers thrive in a fast-evolving
+              world. Our solutions have helped countless businesses transform
+              their digital presence and achieve unprecedented growth.
+            </p>
+            <button className="my-6 w-full text-base max-w-[10rem] bg-appPurple text-appWhite py-3 px-2 rounded-md flex justify-center items-center gap-3">
+              Learn More{" "}
+              <span>
+                <Icon
+                  icon="heroicons-outline:arrow-right"
+                  width="24"
+                  height="24"
+                />
+              </span>
+            </button>
+          </div>
         </div>
 
-        <div className="w-full max-w-[44rem]">
+        {/* our values section */}
+        <section className="px-6 lg:px-14 lg:my-20 bg-[#f3e5ffc6] py-10">
           <div className="flex items-center gap-2">
-            <img src={assets.arrowImg} alt="" className="max-w-[5rem]" />
-            <h2 className="font-extrabold text-base text-appPurple">
-              Who We Are
-            </h2>
+            <img src={assets.arrowImg} alt="" />
+            <h3 className="font-extrabold text-base text-appPurple">
+              Our Values
+            </h3>
           </div>
-          <h1 className="font-extrabold text-4xl w-full my-3 text-[#0d0d0d]">
-            Our journey began with a small team of{" "}
-            <span className="text-appPurple">passionate innovators</span>
+          <h1 className="font-extrabold text-4xl  w-full max-w-[52rem] mb-3">
+            Our core values are the foundation of everything we strive to
+            achieve.
           </h1>
-          <p className="my-6 text-base md:text-lg">
-            Jodna Technology was founded to connect businesses with the top
-            freelance talent in technology and business. Since our inception,
-            we've grown into a trusted global platform, bridging the gap between
-            companies’ needs and skilled professionals, helping businesses
-            succeed and freelancers thrive in a fast-evolving world. Our
-            solutions have helped countless businesses transform their digital
-            presence and achieve unprecedented growth.
-          </p>
-          <button className="my-6 w-full text-base max-w-[10rem] bg-appPurple text-appWhite py-3 px-2 rounded-md flex justify-center items-center gap-3">
-            Learn More{" "}
-            <span>
-              <Icon
-                icon="heroicons-outline:arrow-right"
-                width="24"
-                height="24"
-              />
-            </span>
-          </button>
-        </div>
-      </div>
+
+          <div className="my-10 lg:my-12 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-6 gap-10">
+            {ourValues.map((value, index) => (
+              <div
+                key={index}
+                className="bg-[#fffdfd80] text-appNavy backdrop-blur-lg py-2.5 px-3 rounded-xl border border-appPurple/70"
+              >
+                <img
+                  src={value.img}
+                  alt="value icon"
+                  className="md:w-[3rem] w-[2.48rem]"
+                />
+                <h3 className="font-bold text-appPurple/95 text-lg my-2">
+                  {value.title}
+                </h3>
+                <p className="text-[15px] md:text-base">{value.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* achievement section */}
+        <section className="px-6 lg:px-14 my-14 lg:my-20">
+          <div className="flex items-center gap-2">
+            <img src={assets.arrowImg} alt="" />
+            <h3 className="font-extrabold text-base text-appPurple">
+              What We've Done
+            </h3>
+          </div>
+
+          <h1 className="font-extrabold md:text-4xl text-3xl w-full md:max-w-[50rem] mb-3">
+            Our path has been defined by key milestones and achievements.
+          </h1>
+
+          <div className="my-10 lg:my-14 grid lg:grid-cols-2 grid-cols-1 gap-5">
+            {achievments.map((item, index) => (
+              <div
+                key={index}
+                className="py-2.5 px-3.5 rounded-xl border border-appPurple/40 bg-[#eec7ff42]"
+              >
+                <div className="w-[rem]">
+                  <img src={item.img} alt="" />
+                </div>
+                <h3 className="font-extrabold text-lg my-2 text-appPurple/85">
+                  {item.title}
+                </h3>
+                <p className="text-[15px] md:text-base">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* teams section */}
+        <section className="px-6 lg:px-14">
+          <div className="flex gap-2 items-center">
+            <img src={assets.arrowImg} alt="" />
+            <h3 className="font-extrabold text-base text-appPurple">
+              Meet Our Team
+            </h3>
+          </div>
+          <h1 className="font-extrabold md:text-4xl text-3xl w-full md:max-w-[50rem] mb-3">
+            We come together as a team to deliver the best services to our
+            clients.
+          </h1>
+          <div className="team-container">
+            {teamsData.map((team, index) => (
+              <div key={index}>
+                <div>
+                  <img src={team.img} alt="Image Of Team" />
+                </div>
+                <div className="text">
+                  <h3>{team.name}</h3>
+                  <p>{team.postition}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="px-6 lg:px-14">
+          <div className="">
+            <div className="text">
+              <h1 className="heading">Join us at Jodna Technology!</h1>
+              <p>
+                Ready for growth and innovation? Join Jodna Technology and
+                connect with top talent to shape the future. Whether you're a
+                freelancer seeking opportunities or a business in need of
+                skilled talent, we're here to connect you with success.
+              </p>
+              <button className="join-btn">
+                Explore Our Services
+                <img src={assets.arrowImg} alt="" />
+              </button>
+            </div>
+            <div className="joinUs-img">
+              <img src={""} alt="Image" />
+            </div>
+          </div>
+        </section>
+      </>
     </div>
   );
 };
