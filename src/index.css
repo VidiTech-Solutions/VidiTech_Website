@@ -24,3 +24,10 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
 }
+
+.servicesBg {
+  background-image: url("./assets/servicesBg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}

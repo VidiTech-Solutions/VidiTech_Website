@@ -321,12 +321,12 @@ export const teamsData = [
   {
     img: assets.teamImg1,
     name: "Victor",
-    postition: "CEO",
+    postition: "CEO, Backend Engineer",
   },
   {
     img: assets.teamImg2,
     name: "Divine",
-    postition: "CEO",
+    postition: "CEO, Frontend Engineer",
   },
 ];
 

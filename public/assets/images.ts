@@ -34,6 +34,7 @@ export const assets = {
   servicesIcon4: `${basePath}/servicesIcon-4.svg`,
   servicesIcon5: `${basePath}/servicesIcon-5.svg`,
   servicesIcon6: `${basePath}/servicesIcon-6.svg`,
+  joinUsImg: `${basePath}/JoinUs-img.svg`,
 };
 
 export default assets;

@@ -65,7 +65,7 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? "fixed left-0 top-0 w-full max-w-[29rem] md:max-w-[47rem] lg:hidden z-999 duration-300 px-12 py-8 bg-appWhite h-screen overflow-y-auto border-r border-r-black/10"
+              ? "fixed left-0 top-0 w-full max-w-[29rem] md:max-w-[47rem] lg:hidden z-999 duration-300 px-12 py-8 bg-[#fff5ff] h-screen overflow-y-auto border-r border-r-black/10"
               : "fixed left-[-100%] top-0 h-full z-10"
           }
         >

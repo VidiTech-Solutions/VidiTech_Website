@@ -129,7 +129,7 @@ const AboutPage = () => {
         </section>
 
         {/* teams section */}
-        <section className="px-6 lg:px-14">
+        <section className="px-6 lg:px-14 lg:py-14 py-6">
           <div className="flex gap-2 items-center">
             <img src={assets.arrowImg} alt="" />
             <h3 className="font-extrabold text-base text-appPurple">
@@ -140,38 +140,50 @@ const AboutPage = () => {
             We come together as a team to deliver the best services to our
             clients.
           </h1>
-          <div className="team-container">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-4 my-6">
             {teamsData.map((team, index) => (
-              <div key={index}>
-                <div>
-                  <img src={team.img} alt="Image Of Team" />
+              <div key={index} className="overflow-hidden rounded-lg">
+                <div className="h-[31rem] w-full flex justify-center items-center">
+                  <img
+                    src={team.img}
+                    alt="Image Of Team"
+                    className="object-cover h-full w-full rounded-lg"
+                  />
                 </div>
-                <div className="text">
-                  <h3>{team.name}</h3>
-                  <p>{team.postition}</p>
+                <div className="my-4 text-[#2c1461]">
+                  <h3 className="font-extrabold text-lg">{team.name}</h3>
+                  <p className="text-sm font-light">{team.postition}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="px-6 lg:px-14">
-          <div className="">
-            <div className="text">
-              <h1 className="heading">Join us at Jodna Technology!</h1>
-              <p>
+        <section className="relative px-6 lg:px-14 lg:py-14 py-6">
+          <div className="relative grid lg:grid-cols-2 grid-cols-1">
+            <div className="">
+              <h1 className="font-extrabold text-6xl max-w-[38rem]">
+                Join us at <span className="text-appPurple">VidiTech</span>{" "}
+                today!
+              </h1>
+              <p className="my-5 md:text-base text-[15px]">
                 Ready for growth and innovation? Join Jodna Technology and
                 connect with top talent to shape the future. Whether you're a
                 freelancer seeking opportunities or a business in need of
                 skilled talent, we're here to connect you with success.
               </p>
-              <button className="join-btn">
+              <button className="flex items-center gap-3 py-3 px-3.5 text-appPurple rounded-lg border border-appPurple/40 hover:bg-appWhite transition-all duration-300">
                 Explore Our Services
-                <img src={assets.arrowImg} alt="" />
+                {/* <img src={assets.arrowImg} alt="" /> */}
+                <Icon
+                  icon="heroicons-outline:arrow-right"
+                  width="24"
+                  height="24"
+                />
               </button>
             </div>
-            <div className="joinUs-img">
-              <img src={""} alt="Image" />
+            <div className=" lg:mt-0 mt-10">
+              <img src={assets.joinUsImg} alt="Image" className="" />
             </div>
           </div>
         </section>
