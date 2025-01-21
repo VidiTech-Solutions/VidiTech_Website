@@ -16,7 +16,7 @@ const Hero = () => {
             Empowering your business with expert freelance talent, ensuring
             secure, seamless, and affordable digital solutions.
           </p>
-          <button className="my-1 w-full text-base max-w-[10rem] bg-appPurple text-appWhite py-3.5 px-2 rounded-md">
+          <button className="my-1 w-full text-base max-w-[10rem] bg-gradient-to-r from-[#A234FD] to-[#651FFF] hover:opacity-90 text-white py-3.5 px-2 rounded-md">
             Get Started
           </button>
         </div>

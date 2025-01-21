@@ -1,18 +1,32 @@
 import { Link } from "react-router-dom";
 import { assets } from "../../public/assets/images";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navData } from "../data/data";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    const isScrolled = window.scrollY > 20;
+    setScrolled(isScrolled);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
   const handleNav = () => {
     setNav(false);
   };
 
   return (
-    <header className="w-full px-8 lg:px-20 lg:pt-7 pb-4 pt-5 sticky top-0 z-50 border-b border-b-appPurple/10 backdrop-blur-md">
+    <header className={` w-full px-8 lg:px-20 lg:pt-7 pb-4 pt-5 sticky top-0 z-50 border-b border-b-appPurple/10 backdrop-blur-xl ${scrolled 
+        ? 'bg-white/80 backdrop-blur-md shadow-md' 
+        : ''
+    }`}>
       <nav className="w-full flex justify-between items-center">
         {/* logo */}
         <div>
@@ -39,11 +53,9 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* <button className="hidden lg:block text-base bg-appPurple py-2.5 rounded-lg px-2 max-w-[8rem] w-full text-white">
-          <Link to={"/contact-us"}>Contact</Link>
-        </button> */}
+      
 
-        <button className="hidden lg:block relative text-base bg-appPurple py-2.5 rounded-lg px-2 max-w-[8rem] w-full text-white overflow-hidden group">
+        <button className="hidden lg:block relative text-base bg-gradient-to-r from-[#A234FD] to-[#651FFF] hover:opacity-90 py-2.5 rounded-lg px-2 max-w-[8rem] w-full text-white overflow-hidden group">
           <Link
             to={"/contact-us"}
             className="relative z-10 group-hover:text-appPurple transition-colors duration-300"
