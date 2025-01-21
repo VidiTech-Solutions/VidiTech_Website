@@ -23,10 +23,11 @@ useEffect(() => {
   };
 
   return (
-    <header className={` w-full px-8 lg:px-20 lg:pt-7 pb-4 pt-5 sticky top-0 z-50 border-b border-b-appPurple/10 backdrop-blur-xl ${scrolled 
-        ? 'bg-white/80 backdrop-blur-md shadow-md' 
-        : ''
-    }`}>
+    <header
+      className={` w-full px-8 lg:px-20 lg:pt-7 pb-4 pt-5 sticky top-0 z-50 border-b border-b-appPurple/10 backdrop-blur-xl ${
+        scrolled ? "bg-white/80 backdrop-blur-md shadow-md" : ""
+      }`}
+    >
       <nav className="w-full flex justify-between items-center">
         {/* logo */}
         <div>
@@ -52,8 +53,6 @@ useEffect(() => {
             </li>
           ))}
         </ul>
-
-      
 
         <button className="hidden lg:block relative text-base bg-gradient-to-r from-[#A234FD] to-[#651FFF] hover:opacity-90 py-2.5 rounded-lg px-2 max-w-[8rem] w-full text-white overflow-hidden group">
           <Link
@@ -105,11 +104,16 @@ useEffect(() => {
             ))}
           </ul>
           <div className="my-14">
-            <button className="text-base bg-appPurple py-2.5 rounded-lg px-2 max-w-[8rem] w-full text-white hover:bg-transparent hover:border hover:border-appPurple/35 hover:text-appPurple hover:ease-in-out hover:duration-300">
-              <Link to={"/contact-us"} onClick={handleNav}>
+            <Link
+              to={"/contact-us"}
+              onClick={handleNav}
+              className="text-base bg-gradient-to-r from-[#A234FD] to-[#651FFF] py-2.5 rounded-lg px-6 max-w-[8rem] w-full text-white inline-block text-center relative overflow-hidden group transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            >
+              <span className="relative z-10 group-hover:text-appPurple transition-colors duration-300">
                 Contact
-              </Link>
-            </button>
+              </span>
+              <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left"></span>
+            </Link>
           </div>
         </div>
       </nav>

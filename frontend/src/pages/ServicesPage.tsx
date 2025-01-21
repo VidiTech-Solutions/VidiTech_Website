@@ -23,7 +23,7 @@ const ServicesPage = () => {
             digital reality. Explore our core services and how we make every
             project a success.
           </p>
-          <button className="my-3  text-base  bg-purple-700 hover:bg-purple-800 text-white py-3.5 px-4 rounded-md shadow-md">
+          <button className="my-3  text-base  bg-gradient-to-r from-[#A234FD] to-[#651FFF] hover:opacity-90 text-white py-3.5 px-4 rounded-md shadow-md">
             Schedule an Expert Call{" "}
           </button>
         </div>
