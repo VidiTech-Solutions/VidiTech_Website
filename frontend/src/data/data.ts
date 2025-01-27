@@ -57,35 +57,36 @@ export interface serviceOffer {
 export const serviceOfferData: serviceOffer[] = [
   {
     image: "eos-icons:software-outlined",
-    headline: "Software Development",
-    text: "The development of reliable and scalable software solutions for any OS, browser, and device. We bring together deep industry expertise and the latest IT advancements to deliver custom solutions and products that perfectly fit the needs and behavior of their users.",
+    headline: "Web and Mobile App Development",
+    text: "We build custom, scalable, and user-focused web and mobile solutions tailored to your business needs.",
   },
   {
     image: "mdi:bullhorn-outline",
     headline: "Digital Marketing",
-    text: "Our team of experts are equipped to propel your brand to new heights. Partner with us, and let's guide you through every step.",
+    text: "Elevate your brand with strategies that drive growth and engagement at every stage.",
   },
   {
     image: "carbon:touch-interaction",
     headline: "UI/UX Design",
-    text: "Our dedicated team develops UX/UI designs for all types of websites, SaaS, and web/mobile apps. We combine the latest UI/UX trends with our customers’ individual goals and needs to deliver intuitive, vibrant, and impactful designs that power up businesses.",
+    text: "Create intuitive and visually stunning designs that connect with your audience and drive results.",
   },
   {
     image: "fluent:people-community-28-filled",
-    headline: "Consulting, Support & Maintenance",
-    text: "Our experts can help to develop and implement an effective IT strategy, assist in smooth digital transformation and system integration, and advise on improvements to your digital customer experience.",
-  },
-  {
-    image: "tabler:device-desktop-code",
-    headline: "Cross-Platform",
-    text: "Our designs are built to thrive and adapt across multiple devices, providing optimized accessibility and reach.",
-  },
-  {
-    image: "ri:line-chart-line",
-    headline: "Business Strategy",
-    text: "At Jodna, we deliver actionable strategies that capitalize on opportunities and navigate challenges for business growth.",
-  },
+    headline: "Consulting & Support",
+    text: "Get expert guidance, seamless digital transformation, and ongoing support to optimize your business.",
+  },{
+  image: "mdi:palette-outline",
+  headline: "Graphic Design",
+  text: "Bring your brand to life with stunning visuals, logos, and designs that capture attention and leave a lasting impression.",
+  }
+  , {
+  image: "mdi:account-group-outline",
+  headline: "Social Media Management",
+  text: "We create and manage engaging social media strategies to build your online presence, connect with your audience, and drive growth.",
+}
+
 ];
+
 
 export interface whatWeveDone {
   img: string;
@@ -226,46 +227,46 @@ interface PricingPlan {
 export const pricingPlans: PricingPlan[] = [
   {
     plan: "Silver",
-    price: "29",
-    label: "Silver Plan",
+    price: "1,999",
+    label: "Basic Development Plan",
     features: [
-      "Start free Trial today",
-      "Text-to-video",
-      "Automated translations",
-      "100 Creative Units",
-      "All Basic Features",
-      "20+ Remove background/mo",
+      "Up to 5 Pages or Screens",
+      "Responsive Design",
+      "Basic Functionality",
+      "1 Round of Revision",
+      "Simple UI/UX Design",
     ],
   },
   {
     plan: "Gold",
-    price: "59",
-    label: "Gold Plan",
+    price: "4,999",
+    label: "Standard Development Plan",
     features: [
-      "Start free Trial today",
-      "Text-to-video",
-      "Automated translations",
-      "1500 Creative Units",
-      "All Basic Features",
-      "50+ Remove background/mo",
+      "Up to 10 Pages or Screens",
+      "Advanced Features (APIs, Integrations)",
+      "Responsive and Optimized Design",
+      "2 Rounds of Revisions",
+      "Custom UI/UX Design",
+      "Basic Maintenance (1 Month)",
     ],
     image: assets.planImg,
   },
   {
     plan: "Platinum",
-    price: "199",
-    label: "Platinum Plan",
+    price: "9,999+",
+    label: "Premium Development Plan",
     features: [
-      "Start free Trial today",
-      "Text-to-video",
-      "Automated translations",
-      "Unlimited Avatars",
-      "All Basic Features",
-      "Unlimited Remove background/mo",
-      "16x Factor Upscaling",
+      "Unlimited Pages or Screens",
+      "Complex Features (e.g., AI, E-commerce, Real-time Systems)",
+      "Scalable and High-Performance Design",
+      "Unlimited Revisions",
+      "Premium UI/UX Design",
+      "Comprehensive Maintenance (3 Months)",
     ],
   },
 ];
+
+
 
 export const ourValues = [
   {
@@ -351,13 +352,13 @@ export const servicesData = [
   },
   {
     icon: assets.servicesIcon2,
-    title: "Cybersecurity",
+    title: "Graphic design",
     offers: [
-      "Data protection and encryption",
-      "Mobile app development (iOS/Android)",
-      "Vulnerability assessment and testing",
-      "Risk management",
-      "Network security solutions",
+      "Logo design",
+      "Branding and identity",
+      "Packaging design",
+      "Website design",
+      "Brochure design",
     ],
   },
   {
@@ -373,32 +374,34 @@ export const servicesData = [
   },
   {
     icon: assets.servicesIcon4,
-    title: "Brand Identity",
+    title: "Consulting & Support",
     offers: [
-      "Custom application development",
-      "Mobile app development (iOS/Android)",
-      "Web application development",
-      "API integration and development",
+      "Project management and time management",
+      "Cost estimation and budgeting",
+      "Technical consultation and support",
+      "Business plan and strategy development",
+
     ],
   },
   {
     icon: assets.servicesIcon5,
     title: "Digital Marketing",
     offers: [
-      "Custom application development",
-      "Mobile app development (iOS/Android)",
-      "Web application development",
-      "API integration and development",
+      "Targeted marketing campaigns for maximum ROI",
+      "SEO and content strategies to boost online visibility",
+      "Social media management to grow your audience",
+      "Analytics-driven insights to refine marketing efforts",
     ],
   },
   {
     icon: assets.servicesIcon6,
-    title: "Data Analysis",
+    title: "Social Media Management",
     offers: [
-      "Data analysis and reporting",
-      "Data visualization",
-      "Database management",
-      "Business intelligence (BI) solutions",
+      "Content creation and management",
+      "Social media advertising strategies",
+      "Analytics-driven insights to refine marketing efforts",
+      "Email marketing to increase website traffic",
+      
     ],
   },
 ];

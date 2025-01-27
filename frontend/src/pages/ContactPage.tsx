@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { ContactFormData } from "../data/data";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -28,24 +29,48 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <div className="bg-white py-16 px-6">
+    <motion.div
+      className="min-h-screen bg-gray-50"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <motion.div
+        className="bg-white py-16 px-6"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
         <div className="py-8">
-        <h1 className="w-full mx-auto max-w-[42rem] font-extrabold lg:text-5xl text-4xl">
-          We'd love to hear from you.{" "}
-          <span className="text-appPurple mt-1">Get in Touch</span> 👋
-        </h1>
-
-       
+          <h1 className="w-full mx-auto max-w-[42rem] font-extrabold lg:text-5xl text-4xl">
+            We'd love to hear from you.{" "}
+            <motion.span
+              className="text-appPurple mt-1"
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              transition={{
+                duration: 0.6,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
+            >
+              Get in Touch
+            </motion.span>{" "}
+            👋
+          </h1>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Form Section */}
-      <div className="max-w-4xl mx-auto px-6 -mt-10">
+      <motion.div
+        className="max-w-4xl mx-auto px-6 -mt-10"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut", delay: 0.3 }}
+      >
         <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
           <form onSubmit={handleSubmit} className="space-y-8">
-            {/* Name & Email */}
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label
@@ -85,7 +110,6 @@ const ContactPage = () => {
               </div>
             </div>
 
-            {/* Interest & Budget */}
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label
@@ -138,7 +162,6 @@ const ContactPage = () => {
               </div>
             </div>
 
-            {/* Message */}
             <div>
               <label
                 htmlFor="message"
@@ -158,46 +181,45 @@ const ContactPage = () => {
               />
             </div>
 
-            {/* Submit Button */}
             <div className="flex items-center justify-between">
-              <button
+              <motion.button
                 type="submit"
                 className="bg-appPurple text-white px-8 py-3 rounded-lg font-medium hover:bg-appPurple/90 transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 Send Message
-              </button>
+              </motion.button>
 
-              {/* Book Call Button */}
               <Link
-                to=""
+                to="https://calendly.com/viditechvd"
                 target="_blank"
                 className="flex items-center gap-2 text-appPurple hover:text-appPurple/80 transition-colors"
               >
-                <span className="relative">
+                <motion.span whileHover={{ scale: 1.2 }} className="relative">
                   <span className="absolute inset-0 rounded-full bg-appPurple/20 animate-ping"></span>
                   <Icon
                     icon="simple-icons:calendly"
                     className="w-5 h-5 relative"
                   />
-                </span>
+                </motion.span>
                 <span className="font-medium">Schedule a Call</span>
               </Link>
             </div>
           </form>
         </div>
+      </motion.div>
 
-        {/* Contact Info */}
-        <div className="mt-12 text-center text-gray-600">
-          <p className="mb-2">or reach us directly at</p>
-          <a
-            href="mailto:Viditechvd@gmail.com"
-            className="text-appPurple font-medium hover:text-appPurple/80"
-          >
-            Viditechvd@gmail.com{" "}
-          </a>
-        </div>
+      <div className="mt-12 text-center text-gray-600">
+        <p className="mb-2">or reach us directly at</p>
+        <a
+          href="mailto:Viditechvd@gmail.com"
+          className="text-appPurple font-medium hover:text-appPurple/80"
+        >
+          Viditechvd@gmail.com{" "}
+        </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

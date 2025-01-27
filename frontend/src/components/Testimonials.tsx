@@ -1,8 +1,8 @@
 import { clientSayData } from "@/data/data";
 import assets from "../../public/assets/images";
-import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
   const responsive = {
@@ -23,24 +23,38 @@ const Testimonials = () => {
     },
   };
 
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
 
   // To do
-  
-  // change images  for the testmonials
 
-
+  // change images  for the testimonials
   return (
     <div className="w-full py-7 lg:py-16 my-10 lg:my-16 bg-appWhite bg-testimonial">
       <div className="px-6 lg:px-20">
-        <div className="flex items-center gap-2">
-          <img src={assets.arrowImg} alt="" className="max-w-[5rem]" />
-          <h2 className="font-extrabold text-base text-appPurple">
-            Client Success Stories
-          </h2>
-        </div>
-        <h2 className="w-full lg:max-w-[59rem] my-3 font-extrabold text-3xl text-appNavy">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={itemVariants}
+        >
+          <div className="flex items-center gap-2">
+            <img src={assets.arrowImg} alt="" className="max-w-[5rem]" />
+            <h2 className="font-extrabold text-base text-appPurple">
+              Client Success Stories
+            </h2>
+          </div>
+        </motion.div>
+
+        <motion.h2
+          className="w-full lg:max-w-[59rem] my-3 font-extrabold text-3xl text-appNavy"
+          initial="hidden"
+          whileInView="visible"
+          variants={itemVariants}
+        >
           Real stories from companies that turned their vision into reality
-        </h2>
+        </motion.h2>
       </div>
 
       <div className="w-full my-8 lg:my-14 md:px-4 px-6">
@@ -59,7 +73,13 @@ const Testimonials = () => {
           arrows={false}
         >
           {clientSayData.map((item, index) => (
-            <div key={index} className="px-4 h-full">
+            <motion.div
+              key={index}
+              className="px-4 h-full"
+              initial="hidden"
+              whileInView="visible"
+              variants={itemVariants}
+            >
               <div className="relative py-6 px-6 rounded-lg border-appPurple/40 bg-[#d8cbf350] backdrop-blur-5xl shadow-md text-appNavy border h-[18rem] flex flex-col group hover:shadow-2xl transition-all duration-300">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="relative">
@@ -100,7 +120,7 @@ const Testimonials = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </Carousel>
       </div>
