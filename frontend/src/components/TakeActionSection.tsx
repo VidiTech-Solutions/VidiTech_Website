@@ -17,7 +17,7 @@ const TakeActionSection = () => {
         {/* Button */}
         <button className="mt-6   bg-gradient-to-r from-[#A234FD] to-[#651FFF] hover:opacity-90 transition-all duration-300 text-white py-3 px-4 rounded-md">
           <Link
-            to={"/"}
+            to={"https://calendly.com/viditechvd"}
             className="flex justify-center items-center gap-2 text-white"
           >
             Schedule an Expert Call{" "}

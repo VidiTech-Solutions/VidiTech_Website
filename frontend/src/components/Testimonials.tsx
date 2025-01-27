@@ -1,60 +1,76 @@
-import { Icon } from "@iconify/react/dist/iconify.js";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
+import { clientSayData } from "@/data/data";
 import assets from "../../public/assets/images";
-import { clientSayData } from "../data/data";
+import React from "react";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const Testimonials = () => {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 1,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 640 },
+      items: 2,
+      slidesToSlide: 1,
+    },
+    mobile: {
+      breakpoint: { max: 640, min: 0 },
+      items: 1,
+      slidesToSlide: 1,
+    },
+  };
+
+
+  // To do
+  
+  // change images  for the testmonials
+
+
   return (
     <div className="w-full py-7 lg:py-16 my-10 lg:my-16 bg-appWhite bg-testimonial">
       <div className="px-6 lg:px-20">
         <div className="flex items-center gap-2">
           <img src={assets.arrowImg} alt="" className="max-w-[5rem]" />
           <h2 className="font-extrabold text-base text-appPurple">
-            Testimonials
+            Client Success Stories
           </h2>
         </div>
         <h2 className="w-full lg:max-w-[59rem] my-3 font-extrabold text-3xl text-appNavy">
-          Hear from our users who have saved thousands on their Startup and SaaS
-          solution spend.
+          Real stories from companies that turned their vision into reality
         </h2>
       </div>
 
       <div className="w-full my-8 lg:my-14 md:px-4 px-6">
-        <Swiper
-          direction={"horizontal"}
-          freeMode={true}
-          spaceBetween={15}
-          breakpoints={{
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            480: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            640: {
-              slidesPerView: 3,
-              spaceBetween: 30,
-            },
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 40,
-            },
-          }}
-          className="custom-swiper"
+        <Carousel
+          responsive={responsive}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={3000}
+          keyBoardControl={true}
+          customTransition="transform 800ms ease-in-out"
+          transitionDuration={800}
+          containerClass="carousel-container"
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+          dotListClass="custom-dot-list-style"
+          itemClass="carousel-item-padding-40-px h-full"
+          arrows={false}
         >
           {clientSayData.map((item, index) => (
-            <SwiperSlide key={index}>
-              <div className="py-3 px-4 rounded-lg border-appPurple/40 bg-[#d8cbf350] backdrop-blur-5xl shadow-xl text-appNavy border">
-                <div className="flex lg:items-center gap-3">
-                  <img
-                    src={item.image}
-                    alt="clients image"
-                    className="max-w-[4rem] md:max-w-[5rem]"
-                  />
-                  <div className="lg:mb-0 mb-2">
+            <div key={index} className="px-4 h-full">
+              <div className="relative py-6 px-6 rounded-lg border-appPurple/40 bg-[#d8cbf350] backdrop-blur-5xl shadow-md text-appNavy border h-[18rem] flex flex-col group hover:shadow-2xl transition-all duration-300">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="relative">
+                    <div className="absolute inset-0 rounded-full bg-appPurple/20 blur-sm transform group-hover:scale-110 transition-transform duration-300"></div>
+                    <img
+                      src={item.image}
+                      alt="client"
+                      className="relative w-14 h-14 rounded-full object-cover border-2 border-appPurple/40"
+                    />
+                  </div>
+                  <div className="pt-1">
                     <h3 className="font-bold text-lg text-appPurple">
                       {item.name}
                     </h3>
@@ -63,24 +79,30 @@ const Testimonials = () => {
                     </p>
                   </div>
                 </div>
-                <h4 className="lg:text-base text-[15px] my-4 text-[#666666]">
-                  {item.testimony}
-                </h4>
-                <hr className="my-2" />
-                <div className="flex justify-between lg:items-center mt-3">
-                  <p className="text-[14.3px]">{item.date}</p>
-                  <span className="flex items-center text-[18px] text-[#edab30]">
-                    <Icon icon="ic:outline-star" />
-                    <Icon icon="ic:outline-star" />
-                    <Icon icon="ic:outline-star" />
-                    <Icon icon="ic:outline-star" />
-                    <Icon icon="ic:outline-star" />
-                  </span>
+
+                <div className="font-light flex-grow overflow-y-auto">
+                  <h4 className="text-base text-[#666666] leading-relaxed mb-4 items-stretch italic">
+                    "{item.testimony}"
+                  </h4>
+                </div>
+
+                <div className="px-4 mt-auto">
+                  <hr className="mb-3 border-appPurple/20" />
+                  <div className="flex justify-between items-center">
+                    <p className="text-[14.3px] text-gray-600">{item.date}</p>
+                    <div className="flex items-center gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <span key={i} className="text-[#edab30] text-lg">
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </SwiperSlide>
+            </div>
           ))}
-        </Swiper>
+        </Carousel>
       </div>
     </div>
   );

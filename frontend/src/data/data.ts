@@ -125,45 +125,53 @@ export interface clientSay {
 
 export const clientSayData: clientSay[] = [
   {
-    name: "Adewale Austin",
-    address: "Abuja, Nigeria",
-    date: "30 October 2024",
+    name: "Michael Johnson",
+    address: "Tech Lead, DataFlow Inc., New York",
+    date: "January 15, 2024",
     image: assets.client1,
     testimony:
-      "Our team of expert are equipped to propel your brand to new heights. Partner with us let's guide you through every step.",
+      "VidiTech delivered our AI analytics platform in record time. Exceptional quality and communication throughout the project.",
   },
   {
-    name: "Sarah Abraham",
-    address: "Ontario, Canada",
-    date: "30 October 2024",
+    name: "Amara Okafor",
+    address: "CEO, FinTech Solutions, Lagos",
+    date: "January 10, 2024",
     image: assets.client2,
     testimony:
-      "Our team of expert are equipped to propel your brand to new heights. Partner with us let's guide you through every step.",
+      "Their team transformed our banking app into a modern solution that our customers love. Best tech partner we've worked with.",
   },
   {
-    name: "Henry Hampthon",
-    address: "Ontario, Kenya",
-    date: "30 October 2024",
+    name: "John Williams",
+    address: "CTO, CloudServe, Texas",
+    date: "January 20, 2024",
     image: assets.client3,
     testimony:
-      "Our team of expert are equipped to propel your brand to new heights. Partner with us let's guide you through every step.",
+      "Outstanding cloud expertise and implementation. They helped us scale our SaaS platform seamlessly.",
   },
   {
-    name: "Henry Hampthon",
-    address: "Ontario, Kenya",
-    date: "30 October 2024",
-    image: assets.client3,
+    name: "Grace Mutua",
+    address: "Founder, EduTech Kenya, Nairobi",
+    date: "January 5, 2024",
+    image: assets.client1,
     testimony:
-      "Our team of expert are equipped to propel your brand to new heights. Partner with us let's guide you through every step.",
+      "VidiTech built our learning platform from scratch. Their work has impacted thousands of students across East Africa.",
   },
   {
-    name: "Henry Hampthon",
-    address: "Ontario, Kenya",
-    date: "30 October 2024",
+    name: "Sarah Chen",
+    address: "Product Lead, WebFlow, San Francisco",
+    date: "December 30, 2023",
+    image: assets.client2,
+    testimony:
+      "Fast, reliable, and innovative. They turned our concept into a powerful web application in just 8 weeks.",
+  },
+  {
+    name: "Kwame Mensah",
+    address: "Director, PayNow, Accra",
+    date: "January 18, 2024",
     image: assets.client3,
     testimony:
-      "Our team of expert are equipped to propel your brand to new heights. Partner with us let's guide you through every step.",
-  },
+      "Their expertise in payment systems helped us become a leading fintech provider in West Africa.",
+  }
 ];
 
 export interface footerItem {
