@@ -87,7 +87,7 @@ const WhoWeAreSection = () => {
             </span>
           </motion.button>
         </motion.div>
-      </div>
+      </div>c
     </div>
   );
 };
