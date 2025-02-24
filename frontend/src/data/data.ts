@@ -22,10 +22,6 @@ export const navData: nav[] = [
     title: "Projects",
     route: "/projects",
   },
-  {
-    title: "Blogs",
-    route: "/blog",
-  },
 ];
 
 export interface projectCount {
@@ -74,19 +70,18 @@ export const serviceOfferData: serviceOffer[] = [
     image: "fluent:people-community-28-filled",
     headline: "Consulting & Support",
     text: "Get expert guidance, seamless digital transformation, and ongoing support to optimize your business.",
-  },{
-  image: "mdi:palette-outline",
-  headline: "Graphic Design",
-  text: "Bring your brand to life with stunning visuals, logos, and designs that capture attention and leave a lasting impression.",
-  }
-  , {
-  image: "mdi:account-group-outline",
-  headline: "Social Media Management",
-  text: "We create and manage engaging social media strategies to build your online presence, connect with your audience, and drive growth.",
-}
-
+  },
+  {
+    image: "mdi:palette-outline",
+    headline: "Graphic Design",
+    text: "Bring your brand to life with stunning visuals, logos, and designs that capture attention and leave a lasting impression.",
+  },
+  {
+    image: "mdi:account-group-outline",
+    headline: "Social Media Management",
+    text: "We create and manage engaging social media strategies to build your online presence, connect with your audience, and drive growth.",
+  },
 ];
-
 
 export interface whatWeveDone {
   img: string;
@@ -172,7 +167,7 @@ export const clientSayData: clientSay[] = [
     image: assets.client3,
     testimony:
       "Their expertise in payment systems helped us become a leading fintech provider in West Africa.",
-  }
+  },
 ];
 
 export interface footerItem {
@@ -265,8 +260,6 @@ export const pricingPlans: PricingPlan[] = [
     ],
   },
 ];
-
-
 
 export const ourValues = [
   {
@@ -380,7 +373,6 @@ export const servicesData = [
       "Cost estimation and budgeting",
       "Technical consultation and support",
       "Business plan and strategy development",
-
     ],
   },
   {
@@ -401,7 +393,6 @@ export const servicesData = [
       "Social media advertising strategies",
       "Analytics-driven insights to refine marketing efforts",
       "Email marketing to increase website traffic",
-      
     ],
   },
 ];

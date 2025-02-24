@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 import { pricingPlans } from "../data/data";
 
 const PricingPlan = () => {
@@ -40,7 +40,7 @@ const PricingPlan = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{  amount: 0.2 }}
+        viewport={{ amount: 0.2 }}
       >
         {pricingPlans.map((plan, index) => (
           <motion.div
@@ -97,13 +97,13 @@ const PricingPlan = () => {
       </motion.div>
 
       <motion.div
-        className="text-center mt-16"
+        className="text-center mt-[12rem]"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{  amount: 0.2 }}
+        viewport={{ amount: 0.2 }}
       >
-        <h2 className="text-2xl lg:text-3xl font-bold text-appNavy">
+        <h2 className="text-2xl lg:text-4xl font-bold text-appNavy">
           Looking for a Custom Plan?
         </h2>
         <p className="text-base lg:text-lg text-appNavy/75 mt-4 max-w-[40rem] mx-auto">
@@ -111,7 +111,7 @@ const PricingPlan = () => {
           a plan tailored just for you.
         </p>
         <motion.button
-          className="mt-6 px-5 py-3 text-white rounded-lg bg-gradient-to-r from-[#A234FD] to-[#651FFF] hover:opacity-90"
+          className="mt-6 px-5 py-3 text-white rounded-lg bg-[#651FFF] hover:opacity-90"
           variants={sectionVariants}
         >
           <a

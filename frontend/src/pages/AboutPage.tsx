@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import assets from "../../public/assets/images";
-import { achievments, ourValues, teamsData } from "../data/data";
+import { achievments, ourValues } from "../data/data";
 
 const AboutPage = () => {
   return (
@@ -38,29 +38,23 @@ const AboutPage = () => {
                 Our Story
               </h2>
             </div>
-            <h1 className="font-extrabold text-4xl w-full my-3 text-appDark">
-              We pride ourselves on our{" "}
-              <span className="text-appPurple">commitment</span> to excellence.
-            </h1>
-            <p className="my-6 text-base md:text-lg text-appDark">
-              VidiTech Technology was founded to connect businesses with the top
-              freelance talent in technology and business. Since our inception,
-              we've grown into a trusted global platform, bridging the gap
-              between companies’ needs and skilled professionals, helping
-              businesses succeed and freelancers thrive in a fast-evolving
-              world. Our solutions have helped countless businesses transform
-              their digital presence and achieve unprecedented growth.
-            </p>
-            <button className="my-6 w-full text-base max-w-[10rem] bg-gradient-to-r from-[#A234FD] to-[#651FFF] hover:opacity-90 text-white py-3 px-2 rounded-md flex justify-center items-center gap-3">
-              Learn More{" "}
-              <span>
-                <Icon
-                  icon="heroicons-outline:arrow-right"
-                  width="24"
-                  height="24"
-                />
-              </span>
-            </button>
+            <div className="mt-5">
+              <h1 className="font-extrabold text-4xl w-full my-3 text-appDark">
+                We pride ourselves on our{" "}
+                <span className="text-appPurple">commitment</span> to
+                excellence.
+              </h1>
+              <p className="my-6 text-base md:text-lg text-appDark">
+                VidiTech Technology was founded to connect businesses with the
+                top freelance talent in technology and business. Since our
+                inception, we've grown into a trusted global platform, bridging
+                the gap between companies’ needs and skilled professionals,
+                helping businesses succeed and freelancers thrive in a
+                fast-evolving world. Our solutions have helped countless
+                businesses transform their digital presence and achieve
+                unprecedented growth.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -133,7 +127,7 @@ const AboutPage = () => {
         </section>
 
         {/* teams section */}
-        <section className="px-6 lg:px-14 lg:py-14 py-6">
+        {/* <section className="px-6 lg:px-14 lg:py-14 py-6">
           <div className="flex gap-2 items-center">
             <img src={assets.arrowImg} alt="" />
             <h3 className="font-extrabold text-base text-appPurple">
@@ -161,7 +155,7 @@ const AboutPage = () => {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
 
         <section className="relative px-6 lg:px-14 lg:py-14 py-6">
           <div className="relative grid lg:grid-cols-2 grid-cols-1">

@@ -8,15 +8,15 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-useEffect(() => {
-  const handleScroll = () => {
-    const isScrolled = window.scrollY > 20;
-    setScrolled(isScrolled);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 20;
+      setScrolled(isScrolled);
+    };
 
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleNav = () => {
     setNav(false);
@@ -24,8 +24,8 @@ useEffect(() => {
 
   return (
     <header
-      className={` w-full px-8 lg:px-20 lg:pt-7 pb-4 pt-5 sticky top-0 z-50 border-b border-b-appPurple/10 backdrop-blur-xl ${
-        scrolled ? "bg-white/80 backdrop-blur-md shadow-md" : ""
+      className={` w-full px-8 lg:px-20 lg:pt-7 pb-4 pt-5 sticky top-0 z-50 border-b border-b-appPurple/20 backdrop-blur- ${
+        scrolled ? "bg-white/30 backdrop-blur-md shadow-md" : ""
       }`}
     >
       <nav className="w-full flex justify-between items-center">
@@ -54,15 +54,15 @@ useEffect(() => {
           ))}
         </ul>
 
-        <button className="hidden lg:block relative text-base bg-gradient-to-r from-[#A234FD] to-[#651FFF] hover:opacity-90 py-2.5 rounded-lg px-2 max-w-[8rem] w-full text-white overflow-hidden group">
-          <Link
-            to={"/contact-us"}
-            className="relative z-10 group-hover:text-appPurple transition-colors duration-300"
-          >
+        <Link
+          to={"/contact-us"}
+          className="hidden lg:block relative text-base bg-gradient-to-r from-[#A234FD] to-[#651FFF] hover:opacity-90 py-2.5 rounded-lg px-2 max-w-[8rem] w-full text-white overflow-hidden group"
+        >
+          <div className="relative z-10 group-hover:text-appPurple transition-colors duration-300 text-center">
             Contact
-          </Link>
+          </div>
           <span className="absolute inset-0 bg-appWhite scale-x-0 group-hover:scale-x-100 transform origin-left transition-transform duration-300 ease-in-out"></span>
-        </button>
+        </Link>
 
         {/* hamburger menu icon */}
         <span
