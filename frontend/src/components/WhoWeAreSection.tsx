@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion } from "framer-motion";
 import assets from "../../public/assets/images";
+import { Link } from "react-router-dom";
 
 const WhoWeAreSection = () => {
   const itemVariants = {
@@ -20,7 +21,7 @@ const WhoWeAreSection = () => {
           variants={itemVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{  amount: 0.2 }}
+          viewport={{ amount: 0.2 }}
         >
           <img src={assets.whoWeAreImg} alt="image" />
         </motion.div>
@@ -37,7 +38,7 @@ const WhoWeAreSection = () => {
             variants={itemVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{  amount: 0.2 }}
+            viewport={{ amount: 0.2 }}
           >
             <img src={assets.arrowImg} alt="" className="max-w-[5rem]" />
             <h2 className="font-extrabold text-base text-appPurple">
@@ -61,7 +62,7 @@ const WhoWeAreSection = () => {
             variants={itemVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{  amount: 0.2 }}
+            viewport={{ amount: 0.2 }}
           >
             We pride ourselves on our commitment to excellence, cutting-edge
             innovation, and unwavering focus on client satisfaction. Our
@@ -70,21 +71,21 @@ const WhoWeAreSection = () => {
           </motion.p>
 
           <motion.button
-            className="my-6 w-full text-base max-w-[10rem] bg-gradient-to-r from-[#A234FD] to-[#651FFF] hover:opacity-90 text-white py-3 px-2 rounded-md flex justify-center items-center gap-3"
+            className="my-6 w-full text-base max-w-[10rem] bg-appWhite text-appPurple py-3 px-2 rounded-full flex justify-center items-center gap-3"
             variants={itemVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ amount: 0.2 }}
           >
-            Learn More{" "}
-            <span>
-              <Icon
-                icon="heroicons-outline:arrow-right"
-                width="24"
-                height="24"
-                className="text-appWhite"
-              />
-            </span>
+            <Link
+              to="/about"
+              className="flex items-center gap-3 w-full justify-center"
+            >
+              Learn More
+              <span className="text-lg">
+                <Icon icon="flowbite:arrow-up-right-from-square-outline" />
+              </span>
+            </Link>
           </motion.button>
         </motion.div>
       </div>

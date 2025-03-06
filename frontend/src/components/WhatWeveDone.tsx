@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import assets from "../../public/assets/images";
 import { whatWeveDoneData } from "../data/data";
 import { motion } from "framer-motion";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 const WhatWeveDone = () => {
-
   const containerVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -44,9 +44,23 @@ const WhatWeveDone = () => {
           clients.
         </h1>
 
-        <button className="my-1 w-full text-base max-w-[10rem] bg-gradient-to-r from-[#A234FD] to-[#651FFF] hover:opacity-90 text-white py-3 px-2 rounded-md">
-          <Link to={"/projects"}>Learn More</Link>
-        </button>
+        <motion.button
+          className="my-6 w-full text-base max-w-[10rem] bg-appWhite text-appPurple py-3 px-2 rounded-full flex justify-center items-center gap-3"
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2 }}
+        >
+          <Link
+            to="/projects"
+            className="flex items-center gap-3 w-full justify-center"
+          >
+            Learn More
+            <span className="text-lg">
+              <Icon icon="flowbite:arrow-up-right-from-square-outline" />
+            </span>
+          </Link>
+        </motion.button>
       </motion.div>
 
       <motion.div
@@ -70,13 +84,13 @@ const WhatWeveDone = () => {
               <h1 className="text-[#07000E] font-bold text-[24px]">
                 {item.title}
               </h1>
-              <h3 className="text-appPurple text-xl font-bold">
+              <h3 className="text-[#5833fd] text-xl font-bold">
                 {item.subTitle}
               </h3>
               <div className="mt-2 flex gap-2 flex-wrap">
                 {item.frameWork.map((fw, index) => (
                   <span
-                    className="bg-appWhite py-2 px-3 text-[#a33af9] text-sm rounded-full"
+                    className="bg-appWhite py-2 px-3 text-appPurple text-sm rounded-full"
                     key={index}
                   >
                     {fw}
