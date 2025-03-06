@@ -13,20 +13,20 @@ body {
 }
 
 .bg-testimonial {
-  background-image: url("./assets/Pattern.svg");
+  background-image: url("/assets/Pattern.svg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .aboutpageBg {
-  background-image: url("./assets/aboutBg.svg");
+  background-image: url("/assets/aboutBg.svg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
 }
 
 .servicesBg {
-  background-image: url("./assets/servicesBg.svg");
+  background-image: url("/assets/servicesBg.svg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
