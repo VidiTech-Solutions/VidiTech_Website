@@ -8,6 +8,9 @@ export default {
     extend: {
       fontFamily: {
         mulish: ["Mulish"],
+        Granville: ["Granville", "sans-serif"],
+        Neue: ["Neue", "sans-serif"],
+        std: ["std", "sans-serif"],
       },
       colors: {
         appNavy: "#0F172A",

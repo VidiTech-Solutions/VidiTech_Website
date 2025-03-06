@@ -396,44 +396,180 @@ export const servicesData = [
     ],
   },
 ];
-
-export interface Project {
+interface Project {
   id: number;
   title: string;
   description: string;
   image: string;
   category: string;
+  technologies: string[];
+  year: string;
+  client?: string;
+  challenge?: string;
+  solution?: string;
+  results?: string[];
+  testimonial?: {
+    quote: string;
+    author: string;
+    position: string;
+  };
 }
 
 export const projectsData: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Store",
+    title: "Neural Analytics Platform",
     description:
-      "A sleek and modern online shopping platform with advanced features.",
-    image: "https://via.placeholder.com/400x300",
-    category: "Web Development",
+      "Enterprise-grade analytics platform with AI-powered insights for financial institutions.",
+    image: "https://via.placeholder.com/1200x800",
+    category: "AI Solutions",
+    technologies: ["TensorFlow", "Python", "React", "AWS"],
+    year: "2023",
+    client: "Global Finance Corp",
+    challenge:
+      "Develop a scalable platform that processes terabytes of financial data to identify patterns and generate actionable insights in real-time.",
+    solution:
+      "We built a cloud-native platform using AWS services and TensorFlow to create custom machine learning models tailored to specific financial use cases.",
+    results: [
+      "Reduced data processing time by 85%",
+      "Increased prediction accuracy to 97.8%",
+      "Saved client $2.4M annually in operational costs",
+    ],
+    testimonial: {
+      quote:
+        "The neural analytics platform has transformed how we approach risk management and investment decisions.",
+      author: "Sarah Chen",
+      position: "CTO, Global Finance Corp",
+    },
   },
   {
     id: 2,
-    title: "Brand Identity Design",
-    description: "Crafted a cohesive brand identity for a startup business.",
-    image: "https://via.placeholder.com/400x300",
-    category: "Branding",
+    title: "Intelligent Supply Chain System",
+    description:
+      "End-to-end supply chain optimization using predictive analytics and real-time tracking.",
+    image: "https://via.placeholder.com/1200x800",
+    category: "Enterprise Software",
+    technologies: ["Node.js", "MongoDB", "React", "Docker"],
+    year: "2023",
+    client: "Logistics International",
+    challenge:
+      "Create a system that provides end-to-end visibility and optimization for global supply chain operations with complex variables.",
+    solution:
+      "We developed a containerized microservices architecture with real-time data processing and advanced visualization dashboard.",
+    results: [
+      "Improved delivery time accuracy by 43%",
+      "Reduced inventory costs by 27%",
+      "Increased supply chain resilience during disruptions",
+    ],
+    testimonial: {
+      quote:
+        "This solution has given us unprecedented visibility into our global operations and significantly improved our decision-making.",
+      author: "Marcus Johnson",
+      position: "VP of Operations, Logistics International",
+    },
   },
   {
     id: 3,
-    title: "SEO Optimization",
-    description: "Improved organic search rankings for a tech blog.",
-    image: "https://via.placeholder.com/400x300",
-    category: "SEO",
+    title: "Healthcare Data Platform",
+    description:
+      "HIPAA-compliant patient data management system with advanced analytics capabilities.",
+    image: "https://via.placeholder.com/1200x800",
+    category: "HealthTech",
+    technologies: ["Python", "PostgreSQL", "Vue.js", "Azure"],
+    year: "2022",
+    client: "MediCorp Systems",
+    challenge:
+      "Build a secure, HIPAA-compliant platform for managing sensitive patient data while enabling powerful analytics for medical research.",
+    solution:
+      "We created a multi-layered security architecture with end-to-end encryption and granular access controls, coupled with a flexible analytics engine.",
+    results: [
+      "Achieved 100% HIPAA compliance",
+      "Enabled secure collaboration between 12 research institutions",
+      "Reduced report generation time from 48 hours to 10 minutes",
+    ],
+    testimonial: {
+      quote:
+        "The platform has revolutionized how we handle patient data and accelerated our research initiatives substantially.",
+      author: "Dr. Emily Rodriguez",
+      position: "Chief Medical Officer, MediCorp Systems",
+    },
   },
   {
     id: 4,
-    title: "Portfolio Website",
-    description: "Designed and developed a responsive personal portfolio.",
-    image: "https://via.placeholder.com/400x300",
-    category: "Web Development",
+    title: "Quantum Computing Simulator",
+    description:
+      "Educational platform for simulating quantum algorithms with interactive visualizations.",
+    image: "https://via.placeholder.com/1200x800",
+    category: "Research Tools",
+    technologies: ["TypeScript", "WebGL", "Three.js", "Next.js"],
+    year: "2023",
+    challenge:
+      "Create an accessible yet powerful tool for visualizing and understanding complex quantum computing concepts.",
+    solution:
+      "We built an interactive 3D visualization engine using WebGL and Three.js with educational pathways from beginner to advanced concepts.",
+    results: [
+      "Used by 40+ universities worldwide",
+      "Over 25,000 active monthly users",
+      "Awarded 'Best Educational Tool' at Quantum Tech Conference",
+    ],
+    testimonial: {
+      quote:
+        "This simulator makes quantum computing concepts tangible and has been invaluable for our students.",
+      author: "Prof. Alex Wong",
+      position: "Quantum Computing Department, Tech University",
+    },
+  },
+  {
+    id: 5,
+    title: "Autonomous Vehicle Interface",
+    description:
+      "Human-machine interface for next-generation autonomous vehicle systems.",
+    image: "https://via.placeholder.com/1200x800",
+    category: "AI Solutions",
+    technologies: ["C++", "React Native", "TensorFlow", "CUDA"],
+    year: "2022",
+    client: "AutoTech Innovations",
+    challenge:
+      "Design an intuitive interface that bridges autonomous systems and human drivers, ensuring safety and clarity in all scenarios.",
+    solution:
+      "We developed a context-aware interface that adjusts information density based on driving modes, with real-time AI processing of environmental data.",
+    results: [
+      "Reduced driver intervention necessity by 64%",
+      "Decreased cognitive load measured by 37%",
+      "Successfully passed all safety certification tests",
+    ],
+    testimonial: {
+      quote:
+        "The interface has solved the critical challenge of keeping humans appropriately engaged in autonomous driving scenarios.",
+      author: "James Harmon",
+      position: "Head of Innovation, AutoTech Innovations",
+    },
+  },
+  {
+    id: 6,
+    title: "Renewable Energy Monitoring",
+    description:
+      "IoT-based monitoring and optimization platform for solar energy installations.",
+    image: "https://via.placeholder.com/1200x800",
+    category: "IoT Platform",
+    technologies: ["IoT", "GraphQL", "React", "Node.js"],
+    year: "2023",
+    client: "SolarFuture Inc",
+    challenge:
+      "Build a scalable system to monitor thousands of distributed solar installations and optimize their performance in real-time.",
+    solution:
+      "We created a cloud-based IoT platform with edge computing capabilities for local optimization and centralized management.",
+    results: [
+      "Improved energy yield by 18% through optimization",
+      "Reduced maintenance costs by 32%",
+      "Increased failure prediction accuracy to 94%",
+    ],
+    testimonial: {
+      quote:
+        "This platform has transformed our business model from reactive to proactive and significantly improved customer satisfaction.",
+      author: "Leila Patel",
+      position: "CEO, SolarFuture Inc",
+    },
   },
 ];
 
