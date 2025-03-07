@@ -28,7 +28,7 @@ const Navbar = () => {
         scrolled ? "bg-white/30 backdrop-blur-md shadow-md" : ""
       }`}
     >
-      <nav className="w-full flex justify-between items-center">
+      <nav className="w-full flex justify-between items-center font-std font-light">
         {/* logo */}
         <div>
           <Link to={"/"} className="flex items-center gap-1.5">

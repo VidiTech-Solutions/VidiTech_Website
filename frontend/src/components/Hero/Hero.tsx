@@ -111,7 +111,6 @@ const Hero = () => {
         </motion.div>
       </motion.div>
 
-      {/* Stats section with scroll-triggered animation */}
       <motion.div
         ref={statsRef}
         variants={statsVariants}
