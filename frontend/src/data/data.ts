@@ -204,7 +204,11 @@ export const footerItems: footerData[] = [
   {
     title: "Follow Us",
     items: [
-      { label: "Facebook", link: "", icon: "ic:outline-facebook" },
+      {
+        label: "Facebook",
+        link: "https://www.facebook.com/profile.php?id=61573589297764",
+        icon: "ic:outline-facebook",
+      },
       { label: "Twitter", link: "", icon: "prime:twitter" },
       { label: "LinkedIn", link: "", icon: "devicon-plain:linkedin" },
     ],

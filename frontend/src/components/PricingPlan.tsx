@@ -115,7 +115,7 @@ const PricingPlan = () => {
           variants={sectionVariants}
         >
           <a
-            href="mailto:Viditechvd@gmail.com"
+            href="mailto:info@viditech.online"
             className="flex items-center gap-2"
           >
             Email Us

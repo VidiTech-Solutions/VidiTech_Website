@@ -162,27 +162,27 @@ const PortfolioPage: React.FC = () => {
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <header className="relative py-24 px-6 bg-white">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-[#651FFF]/5 rounded-full"></div>
-          <div className="absolute bottom-1/3 left-1/3 w-96 h-96 bg-[#651FFF]/10 rounded-full"></div>
-          <div className="absolute top-1/2 left-1/2 w-48 h-48 bg-[#651FFF]/8 rounded-full"></div>
+      {/* Hero Section with Purple Background */}
+      <header className="relative py-16 px-6 bg-gradient-to-br from-[#651FFF]/90 to-[#5019cc]/90 text-white">
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-white/10 rounded-full"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-96 h-96 bg-white/5 rounded-full"></div>
+          <div className="absolute top-1/2 left-1/2 w-48 h-48 bg-white/8 rounded-full"></div>
         </div>
 
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-4 px-4 py-1.5 bg-[#651FFF]/10 text-[#651FFF] font-medium rounded-full text-sm">
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4 px-4 py-1.5 bg-white/10 text-white font-medium rounded-full text-sm backdrop-blur-sm border border-white/20">
               Our Portfolio
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-8 leading-tight">
+            <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
               Innovative solutions for forward-thinking companies
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-10">
+            <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
               We create digital products that help businesses solve complex
               problems and achieve their strategic goals.
             </p>
-            <button className="bg-[#651FFF] text-white px-8 py-3 rounded-md font-medium shadow-md hover:bg-[#5019cc] transition-colors">
+            <button className="bg-white text-[#651FFF] px-6 py-2.5 rounded-md font-medium shadow-md hover:bg-gray-100 transition-colors">
               Explore Our Work
             </button>
           </div>
@@ -190,15 +190,18 @@ const PortfolioPage: React.FC = () => {
       </header>
 
       {/* Projects Section */}
-      {/* <section className="py-20 px-6 bg-gray-50">
+      <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-12">
+          <div className="mb-10">
             <div className="flex flex-col md:flex-row items-start justify-between gap-8">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Our <span className="text-[#651FFF]">Featured</span> Projects
+                <div className="inline-block mb-3 px-3 py-1 bg-[#651FFF]/10 text-[#651FFF] font-medium rounded-full text-sm">
+                  Our Work
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+                  Featured <span className="text-[#651FFF]">Projects</span>
                 </h2>
-                <p className="text-gray-600 max-w-xl">
+                <p className="text-gray-600 max-w-xl text-sm md:text-base">
                   Explore our portfolio of innovative solutions across various
                   industries and technologies.
                 </p>
@@ -207,31 +210,31 @@ const PortfolioPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Process Section */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-block mb-4 px-4 py-1.5 bg-[#651FFF]/10 text-[#651FFF] font-medium rounded-full text-sm">
+          <div className="text-center mb-12">
+            <div className="inline-block mb-3 px-3 py-1 bg-[#651FFF]/10 text-[#651FFF] font-medium rounded-full text-sm">
               Our Approach
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
               How We Deliver Excellence
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
               Our systematic approach ensures we deliver high-quality solutions
               that meet your business objectives.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
               {
                 number: "01",
@@ -258,19 +261,36 @@ const PortfolioPage: React.FC = () => {
                   "We launch your solution and provide ongoing support to ensure long-term success.",
               },
             ].map((step, index) => (
-              <div key={index} className="relative">
-                <div className="border-t-2 border-[#651FFF]/20 pt-6">
-                  <div className="text-[#651FFF] font-mono text-lg font-bold mb-3">
-                    {step.number}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600">{step.description}</p>
+              <div
+                key={index}
+                className="relative bg-gray-50 p-6 rounded-lg hover:shadow-md transition-shadow"
+              >
+                <div className="text-[#651FFF] font-mono text-lg font-bold mb-3">
+                  {step.number}
                 </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-gray-600 text-sm">{step.description}</p>
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-12 px-6 bg-gradient-to-br from-[#651FFF]/90 to-[#5019cc]/90 text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            Ready to bring your vision to life?
+          </h2>
+          <p className="text-white/80 mb-6 max-w-2xl mx-auto text-sm md:text-base">
+            Let's collaborate to create technology that makes a difference for
+            your business.
+          </p>
+          <button className="bg-white text-[#651FFF] px-6 py-2.5 rounded-md font-medium hover:bg-gray-100 transition-colors">
+            Start a Conversation
+          </button>
         </div>
       </section>
 
